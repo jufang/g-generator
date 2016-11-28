@@ -4,8 +4,18 @@
 'use strict';
 var http = require('http'),
     express = require('express'),
+    helmet = require('helmet'),
     server;
 var app = express();
+
+/**
+ * Helmet helps you secure your Express apps by setting various HTTP header
+ */
+app.use(helmet());
+
+/**
+ * routes engine
+ */
 require('./routes.js')(app);
 
 /**
@@ -18,8 +28,9 @@ app.set('port', port);
  * set template engine and set template path
  */
 setTemplateEngine();
-app.set('views', __dirname + '/views')
+app.set('views', __dirname + '/views');
 
+app.use(express.static(__dirname + '/public'));
 
 /**
  * start server
