@@ -1,5 +1,17 @@
-{{include './public/header'}}
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        {{include './public/head-base'}}
+    </head>
 <body>
-    <h1>首页</h1>
+    <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+        your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <h1>HOME</h1>
+    {{include './public/footer'}}
+    <script data-main="js/home" src="https://cdn.staticfile.org/require.js/2.3.2/require.js"></script>
 </body>
-{{include './public/footer'}}
+</html>
