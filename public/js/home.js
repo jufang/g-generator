@@ -1,5 +1,3 @@
-require([
-
-], function( ) {
+require([], function( ) {
    console.log('test');
 });
