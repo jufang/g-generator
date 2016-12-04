@@ -1,0 +1,1 @@
+define("a",[],function(){return{console:function(){console.log("a.js")}}}),define("b",[],function(){return{console:function(){console.log("b.js")}}}),define("c",[],function(){return{console:function(){console.log("c.js")}}}),require.config({pahts:{a:"a",b:"b",c:"c"}}),require(["a","b","c"],function(n,o,e){n.console(),e.console(),e.console()}),define("home",function(){});
